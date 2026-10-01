@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+header {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+
+.intro {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.intro h2 {
+    margin-bottom: 10px;
+}
+
+
+.planner-selection {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+
+.planner-selection button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #2563eb;
+    color: white;
+}
+
+
+.planner-selection button:hover {
+    opacity: 0.85;
+}
+
+
+.planner-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+.planner-card h2 {
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+
+.generate-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #16a34a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.generate-btn:hover {
+    opacity: 0.85;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.result-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+
+.result-card h2 {
+    margin-bottom: 20px;
+}
+
+
+.recommendation-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #2563eb;
+    background: #f1f5f9;
+    border-radius: 5px;
+}
+
+
+.recommendation-item h4 {
+    margin-bottom: 5px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f2937;
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .planner-selection {
+        flex-direction: column;
+    }
+
+    .planner-selection button {
+        width: 100%;
+    }
+}

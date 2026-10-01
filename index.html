@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PocketSmart AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>💰 PocketSmart AI</h1>
+
+        <p>
+            Your Smart Budget & Recommendation Assistant
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="intro">
+
+            <h2>Smart Planning with AI</h2>
+
+            <p>
+                Select a planner and enter your budget details
+                to receive suitable recommendations.
+            </p>
+
+        </section>
+
+
+        <!-- Planner Selection -->
+
+        <section class="planner-selection">
+
+            <button onclick="showPlanner('home')">
+                🏠 Home Interior
+            </button>
+
+            <button onclick="showPlanner('party')">
+                🎉 Party Planner
+            </button>
+
+            <button onclick="showPlanner('jewelry')">
+                💎 Jewelry Planner
+            </button>
+
+        </section>
+
+
+        <!-- HOME PLANNER -->
+
+        <section id="homePlanner"
+                 class="planner-card">
+
+            <h2>🏠 Home Interior Planner</h2>
+
+            <label>Budget</label>
+
+            <input
+                type="number"
+                id="homeBudget"
+                placeholder="Enter your budget">
+
+
+            <label>Rooms</label>
+
+            <input
+                type="text"
+                id="homeRooms"
+                placeholder="Example: Bedroom, Hall, Kitchen">
+
+
+            <label>Required Items</label>
+
+            <input
+                type="text"
+                id="homeQuantities"
+                placeholder="Example: 2 lights, 1 fan, 1 table">
+
+
+            <button class="generate-btn"
+                    onclick="generateHome()">
+
+                Generate Recommendation
+
+            </button>
+
+        </section>
+
+
+        <!-- PARTY PLANNER -->
+
+        <section id="partyPlanner"
+                 class="planner-card hidden">
+
+            <h2>🎉 Party Planner</h2>
+
+            <label>Total Budget</label>
+
+            <input
+                type="number"
+                id="partyBudget"
+                placeholder="Enter your budget">
+
+
+            <label>Number of Guests</label>
+
+            <input
+                type="number"
+                id="partyGuests"
+                placeholder="Example: 100">
+
+
+            <label>Event Type</label>
+
+            <select id="eventType">
+
+                <option value="Birthday">
+                    Birthday
+                </option>
+
+                <option value="Wedding">
+                    Wedding
+                </option>
+
+                <option value="Engagement">
+                    Engagement
+                </option>
+
+                <option value="College Event">
+                    College Event
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label>Venue</label>
+
+            <input
+                type="text"
+                id="partyVenue"
+                placeholder="Example: Marriage Hall">
+
+
+            <button class="generate-btn"
+                    onclick="generateParty()">
+
+                Generate Recommendation
+
+            </button>
+
+        </section>
+
+
+        <!-- JEWELRY PLANNER -->
+
+        <section id="jewelryPlanner"
+                 class="planner-card hidden">
+
+            <h2>💎 Jewelry Planner</h2>
+
+            <label>Budget</label>
+
+            <input
+                type="number"
+                id="jewelryBudget"
+                placeholder="Enter your budget">
+
+
+            <label>Occasion</label>
+
+            <input
+                type="text"
+                id="occasion"
+                placeholder="Example: Wedding">
+
+
+            <label>Style</label>
+
+            <select id="jewelryStyle">
+
+                <option value="Traditional">
+                    Traditional
+                </option>
+
+                <option value="Modern">
+                    Modern
+                </option>
+
+                <option value="Simple">
+                    Simple
+                </option>
+
+                <option value="Party Wear">
+                    Party Wear
+                </option>
+
+            </select>
+
+
+            <button class="generate-btn"
+                    onclick="generateJewelry()">
+
+                Generate Recommendation
+
+            </button>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section id="result"
+                 class="result-card">
+
+            <h2>🤖 AI Recommendation</h2>
+
+            <div id="resultContent">
+
+                <p>
+                    Select a planner and generate a recommendation.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 PocketSmart AI
+        </p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+</body>
+
+</html>
